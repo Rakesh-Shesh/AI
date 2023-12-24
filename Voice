@@ -1,8 +1,5 @@
 #Program to generate Audio
-
-
 from moviepy.editor import *
-
 import pyttsx3
 
 engine = pyttsx3.init()
