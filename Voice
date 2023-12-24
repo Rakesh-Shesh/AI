@@ -1,0 +1,28 @@
+#Program to generate Audio
+
+
+from moviepy.editor import *
+
+import pyttsx3
+
+engine = pyttsx3.init()
+voices = engine.getProperty('voices')
+engine.setProperty('voice', voices[0].id)
+
+text = "Hello"
+engine.setProperty('language', 'en-US')
+engine.setProperty('gender', 'male')
+engine.say(text)
+
+# Save the speech to a file
+# Save the speech to a file
+engine.save_to_file(text , 'test-02.mp3')
+engine.runAndWait()
+# Initialize the video editor
+video = VideoFileClip("background.mp4")
+
+# Add the speech to the video
+video.audio = CompositeAudioClip([video.audio, AudioFileClip("speech.wav")])
+
+# Render the video
+video.write_videofile("....Add File Name Here.....")
