@@ -1,0 +1,11 @@
+<div id="map"></div>
+```
+
+- In your JavaScript code, initialize the map by calling the `google.maps.Map` constructor, passing the container element and any desired options:
+````javascript
+var map = new google.maps.Map(document.getElementById('map'), {
+    center: { lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE },
+    zoom: INITIAL_ZOOM_LEVEL
+});
+```
+Replace `YOUR_LATITUDE` and `YOUR_LONGITUDE` with the desired initial map center coordinates and `INITIAL_ZOOM_LEVEL` with the desired zoom level.
